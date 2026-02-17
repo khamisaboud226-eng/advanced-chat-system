@@ -3,7 +3,7 @@ const http = require("http");
 const mongoose = require("mongoose");
 const { Server } = require("socket.io");
 const crypto = require("crypto");
-const Message = require("./models/Message");
+const Message = require("./models/Messages");
 
 mongoose.connect("MONGO_URI=mongodb+srv://khamisaboud226_db_user:ChatApp2026@cluster0.6n5tsrj.mongodb.net/advanced-chat-sysrem");
 
