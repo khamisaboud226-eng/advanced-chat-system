@@ -47,6 +47,8 @@ io.on("connection", (socket) => {
 
 });
 
-server.listen(3000, () => console.log("Advanced chat running"));
-// Force Sync 1.0
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+    console.log(`Advanced chat running on port ${PORT}`);
+});
 // Version 1.1 sync
