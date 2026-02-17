@@ -12,7 +12,7 @@ const server = http.createServer(app);
 const io = new Server(server);
 
 app.use(express.json());
-app.use("/auth", require("./routes/auth"));
+app.use("/auth", require("./models/routes/auth"));
 app.use(express.static("public"));
 
 io.on("connection", (socket) => {
