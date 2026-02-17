@@ -5,8 +5,7 @@ const { Server } = require("socket.io");
 const crypto = require("crypto");
 const Message = require("./models/Messages");
 
-mongoose.connect("MONGO_URI=mongodb+srv://khamisaboud226_db_user:ChatApp2026@cluster0.6n5tsrj.mongodb.net/advanced-chat-sysrem");
-
+mongoose.connect(process.env.MONGO_URI)
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
