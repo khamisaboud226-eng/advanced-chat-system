@@ -13,7 +13,7 @@ const io = new Server(server);
 
 app.use(express.json());
 app.use("/auth", require("./models/routes/auth"));
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(___dirname, "public")));
 io.on("connection", (socket) => {
 
     socket.on("join-room", (room) => {
