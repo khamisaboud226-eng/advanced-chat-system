@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const http = require("http");
 const mongoose = require("mongoose");
 const { Server } = require("socket.io");
@@ -12,8 +13,7 @@ const io = new Server(server);
 
 app.use(express.json());
 app.use("/auth", require("./models/routes/auth"));
-app.use(express.static("public"));
-
+app.use(express.static(path.join(__dirname, "public")));
 io.on("connection", (socket) => {
 
     socket.on("join-room", (room) => {
